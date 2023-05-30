@@ -7,6 +7,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -19,6 +20,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 @Slf4j
 @RequiredArgsConstructor
+@AllArgsConstructor
 public class JwtAuthenticationProcessingFilter extends OncePerRequestFilter {
 
     private final TokenService tokenService;
